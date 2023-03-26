@@ -4,18 +4,18 @@
             Platz für logo
         </div>
         <ul class="menu">
-            <li>
+            <li routerLink="/">
                 <mat-icon>fact_check</mat-icon>
                 <p>Dashboard</p>
             </li>
-            <li>
+            <li routerLink="/user">
                 <mat-icon>perm_identity</mat-icon>
                 <p>User</p>
             </li>
         </ul>
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div class="sidenav-content">
         <mat-toolbar color="primary">
             <mat-toolbar-row>
                 <button class="menu" mat-icon-button (click)="drawer.toggle()">
@@ -24,7 +24,9 @@
                 <span>Simple CRM</span>
             </mat-toolbar-row>
         </mat-toolbar>
-
+        <div class="router-container">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 
 </mat-drawer-container>

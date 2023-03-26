@@ -4,6 +4,7 @@
 
 .menu {
     cursor: pointer;
+    margin: 0;
 }
 
 mat-toolbar-row,
@@ -14,6 +15,12 @@ mat-toolbar {
 
 .sidenav {
     width: 300px;
+}
+
+.sidenav-content button {
+    padding: 0;
+    margin-left: -10px;
+    margin-right: 10px;
 }
 
 .logo-container {
@@ -27,6 +34,7 @@ mat-toolbar {
 .menu {
     list-style: none;
     padding: 0;
+    margin: 0;
     li {
         width: 100%;
         height: 48px;
@@ -42,4 +50,9 @@ mat-toolbar {
     p {
         margin: 0;
     }
+}
+
+.router-container {
+    padding-left: 56px;
+    padding-top: 16px;
 }

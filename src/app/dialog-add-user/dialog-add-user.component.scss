@@ -1,0 +1,31 @@
+.dialogFields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialogName {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.dialogDate {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dialogAdress {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dialogCity {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}

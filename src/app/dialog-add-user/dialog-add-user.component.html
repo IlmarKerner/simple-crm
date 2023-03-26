@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Add user</h1>
+<div class="dialogFields">
+    <div mat-dialog-content class="dialogName">
+        <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input [(ngModel)]="user.firstName" matInput placeholder="Type first name...">
+            <!-- <mat-hint>Please enter your first name!</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input [(ngModel)]="user.lastName" matInput placeholder="Type last name...">
+            <!-- <mat-hint>Please enter your last name!</mat-hint> -->
+        </mat-form-field>
+    </div>
+    <div>
+        <div class="dialogDate">
+            <mat-form-field appearance="outline" class="fullWidth">
+                <mat-label>Birth date</mat-label>
+                <input [(ngModel)]="birthDate" matInput placeholder="MM/DD/YYYY" matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <!-- <mat-hint>Please enter a date!</mat-hint> -->
+            </mat-form-field>
+        </div>
+        <div class="dialogAdress">
+            <div class="dialogStreet">
+                <mat-form-field appearance="outline" class="fullWidth">
+                    <mat-label>Street + House No.</mat-label>
+                    <input [(ngModel)]="user.street" matInput placeholder="Street + House No....">
+                    <!-- <mat-hint>Please enter your address!</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="dialogCity">
+                <mat-form-field appearance="outline">
+                    <mat-label>Zip code</mat-label>
+                    <input [(ngModel)]="user.zipCode" matInput placeholder="Zip code...">
+                    <!-- <mat-hint>Please enter your address!</mat-hint> -->
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input [(ngModel)]="user.city" matInput placeholder="City...">
+                    <!-- <mat-hint>Please enter your address!</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
+</div>
