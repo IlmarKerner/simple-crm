@@ -33,7 +33,7 @@ export class UserComponent implements OnInit {
   }
 
   openDialog() {
-this.dialog.open(DialogAddUserComponent);
+    this.dialog.open(DialogAddUserComponent);
   }
 
 }
