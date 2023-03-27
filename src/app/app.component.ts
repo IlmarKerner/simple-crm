@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'simple-crm';
 
 
-  constructor(firestore: Firestore) {
+  constructor() {
 
   }
 

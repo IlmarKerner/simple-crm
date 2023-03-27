@@ -1,3 +1,7 @@
+.dialogContainer {
+    position: relative;
+}
+
 .dialogFields {
     display: flex;
     flex-direction: column;
@@ -28,4 +32,9 @@
     display: flex;
     gap: 10px;
     padding: 0;
+}
+
+mat-progress-bar {
+    position: absolute;
+    top: 0px;
 }
