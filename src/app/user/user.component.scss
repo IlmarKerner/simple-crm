@@ -3,3 +3,46 @@
     right: 56px;
     bottom: 56px;
 }
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.userTable {
+    width: 100%;
+    border-collapse: collapse;
+    padding-bottom: 16pxi;
+    tr {
+        border-bottom: 1px solid grey;
+        cursor: pointer;
+        &:hover {
+            background-color: #555555;
+            &:first-child {
+                background-color: unset;
+            }
+        }
+        &:first-child {
+            cursor: unset;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        td {
+            padding-left: 16px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+    }
+    th {
+        font-size: 20px;
+        font-weight: 800;
+        text-align: start;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        padding-left: 16px;
+    }
+}

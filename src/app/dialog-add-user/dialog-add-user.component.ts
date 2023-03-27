@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User } from '../models/user.class';
 import { Firestore } from '@angular/fire/firestore';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { MatDialogRef } from '@angular/material/dialog';
 
 // import { ConsoleReporter } from 'jasmine';
 
@@ -16,9 +17,14 @@ export class DialogAddUserComponent {
 
   loading = false;
 
-  onNoClick() {}
+  closeWindow() {
+    this.dialogRef.close();
+  }
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(
+    private firestore: AngularFirestore,
+    public dialogRef: MatDialogRef<DialogAddUserComponent>
+  ) {}
 
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
@@ -30,6 +36,7 @@ export class DialogAddUserComponent {
       .then((result: any) => {
         this.loading = false;
         console.log(result);
+        this.dialogRef.close();
       });
   }
 }

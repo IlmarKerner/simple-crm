@@ -5,7 +5,7 @@ export class User {
     street: string;
     zipCode: number;
     city: string;
-  email: any;
+    email: any;
 
     constructor(obj?: any) {
         this.firstName = obj ? obj.firstName : ''; // if-Abfrage mit "?" ob obj.firstName eingefügt wird oder mit ":"-oder ein leerer String mit '' geingefügt wird
@@ -14,6 +14,8 @@ export class User {
         this.street = obj ? obj.street : '';
         this.zipCode = obj ? obj.zipCode : '';
         this.city = obj ? obj.city : '';
+        this.email = obj ? obj.email : '';
+        
     }
 
     public toJSON() {
@@ -24,6 +26,7 @@ export class User {
             street: this.street,
             zipCode: this.zipCode,
             city: this.city,
+            email: this.email
         };
     }
 }

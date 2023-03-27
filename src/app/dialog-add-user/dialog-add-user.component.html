@@ -24,6 +24,13 @@
                     <!-- <mat-hint>Please enter a date!</mat-hint> -->
                 </mat-form-field>
             </div>
+            <div class="dialogEmail">
+                <mat-form-field appearance="outline" class="fullWidth">
+                    <mat-label>Email</mat-label>
+                    <input [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Email....">
+                    <!-- <mat-hint>Please enter your Email!</mat-hint> -->
+                </mat-form-field>
+            </div>
             <div class="dialogAdress">
                 <div class="dialogStreet">
                     <mat-form-field appearance="outline" class="fullWidth">
@@ -32,6 +39,7 @@
                         <!-- <mat-hint>Please enter your address!</mat-hint> -->
                     </mat-form-field>
                 </div>
+
                 <div class="dialogCity">
                     <mat-form-field appearance="outline">
                         <mat-label>Zip code</mat-label>
@@ -49,7 +57,7 @@
         </div>
     </div>
     <div mat-dialog-actions>
-        <button [disabled]="loading" mat-button (click)="onNoClick()">Cancel</button>
+        <button [disabled]="loading" mat-button (click)="closeWindow()">Cancel</button>
         <button [disabled]="loading" mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
     </div>
 </div>
