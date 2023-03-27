@@ -10,8 +10,9 @@ import { User } from '../models/user.class';
 })
 export class DialogEditAddressComponent implements OnInit {
 
-user = new User();
+user: User;
 loading = false;
+userId: string;
 
   constructor(
     private firestore: AngularFirestore,
@@ -21,7 +22,7 @@ loading = false;
   }
  
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
 
@@ -29,7 +30,15 @@ loading = false;
     this.dialogRef.close();
   }
 
-  saveUser() {
-
+  saveAddress() {
+    this.loading = true;
+    this.firestore
+    .collection('users')
+    .doc(this.userId)
+    .update(this.user.toJSON())
+    .then(() =>{
+      this.loading = false;
+      this.dialogRef.close();
+    })
   }
 }
